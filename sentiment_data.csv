@@ -1,0 +1,26 @@
+import pandas as pd
+
+# Sample dataset (Text & Sentiment Label)
+data = {
+    "Text": [
+        "I love this product! It's amazing.",
+        "This is the worst experience I've ever had.",
+        "The movie was okay, not too bad but not great either.",
+        "Absolutely fantastic! Best purchase ever.",
+        "I'm very disappointed. It didn't work as expected.",
+        "The service was average. Nothing special.",
+        "Highly recommend! Great quality and fast shipping.",
+        "Terrible customer service! Never buying from them again.",
+        "It was a decent experience, but I had some issues.",
+        "Superb product! Worth every penny."
+    ],
+    "Sentiment": ["Positive", "Negative", "Neutral", "Positive", "Negative",
+                  "Neutral", "Positive", "Negative", "Neutral", "Positive"]
+}
+
+# Convert to DataFrame
+df = pd.DataFrame(data)
+
+# Save to CSV
+df.to_csv("sentiment_data.csv", index=False)
+
